@@ -37,10 +37,10 @@ body {
 }
 h3{
     font-family: 'Verdana', sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 36px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 36px;
 /* identical to box height, or 90% */
 
 text-align: center;
@@ -55,7 +55,7 @@ color: #EEEEEE;
     background: #080001;
     border-radius: 5px;
 }
-.home-points{
+.home-points,.guest-points{
     font-family: 'Cursed Timer ULiL';
     font-style: normal;
     font-weight: 400;
@@ -85,3 +85,41 @@ color: #EEEEEE;
     top:50px;
     left: 8px;
 }
+/* Hover Push */
+@-webkit-keyframes hvr-push {
+    50% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes hvr-push {
+    50% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  .hvr-push {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+ .hvr-push:active {
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
