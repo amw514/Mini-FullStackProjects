@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Verdana';
-    src: url('fonts/verdana.ttf');
+    src: url('../fonts/verdana.ttf');
 }
 @font-face {
     font-family: 'Cursed Timer ULiL';
-    src: url('fonts/CursedTimerUlil-Aznm.ttf');
+    src: url('../fonts/CursedTimerUlil-Aznm.ttf');
 }
 body {
     margin: 0;
-    background-image: url('img/cool-background.png');
+    background-image: url('../img/cool-background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed; 
@@ -16,7 +16,6 @@ body {
 }
 .background {
     width: 100%;
-    height: 100vh;
     top: 0;
     bottom: 0;
     left: 0;
@@ -35,17 +34,13 @@ body {
     top: 200px;
     Left: 600px;
 }
-h3{
-    font-family: 'Verdana', sans-serif;
+h3,#leadingTeam{
+    font-family: 'Cursed Timer ULiL', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
     line-height: 36px;
-/* identical to box height, or 90% */
-
-text-align: center;
-
-color: #EEEEEE;
+    text-align: center;
+    color: #EEEEEE;
 }
 .score-card{
     width: 155px;
@@ -55,7 +50,7 @@ color: #EEEEEE;
     background: #080001;
     border-radius: 5px;
 }
-.home-points,.guest-points{
+#home-points,#guest-points{
     font-family: 'Cursed Timer ULiL';
     font-style: normal;
     font-weight: 400;
@@ -85,41 +80,34 @@ color: #EEEEEE;
     top:50px;
     left: 8px;
 }
-/* Hover Push */
-@-webkit-keyframes hvr-push {
-    50% {
-      -webkit-transform: scale(0.8);
-      transform: scale(0.8);
-    }
-    100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-  }
-  @keyframes hvr-push {
-    50% {
-      -webkit-transform: scale(0.8);
-      transform: scale(0.8);
-    }
-    100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-  }
-  .hvr-push {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  }
- .hvr-push:active {
-    -webkit-animation-name: hvr-push;
-    animation-name: hvr-push;
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-  }
+/* active Push */
+.hvr-push:active {
+    background-color: #9AABD8;
+    color: white;
+    border-color:green;
+    box-shadow: 0px 0px 10px green;
+    transform: scale(1.1);
+}
+#new-game{
+    position: relative;
+    top:6px;
+    right: 90px;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    width: 70px;
+    height: 50px;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #9AABD8;
+    background-color: #1B244A;
+}
+#leadingTeam{
+position: relative;
+left:50px;
+top:70px;
+font-size: 15px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

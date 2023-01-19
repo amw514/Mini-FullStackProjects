@@ -4,32 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/basketball.png" />
     <title>Basketball Scoreboard</title>
-    <link href="css/hover-min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="container">
       <div>
-        <h3>HOME</h3>
+        <h3>First Team</h3>
         <div class="score-card">
-          <p class="home-points">0</p>
+          <p id="home-points">0</p>
         </div>
         <div class="plus-point">
-          <button id="home-one" class="hvr-push">+1</button>
-          <button id="home-two" class="hvr-push">+2</button>
-          <button id="home-three" class="hvr-push">+3</button>
+          <button id="home-one" class="hvr-push" onclick="homeAdd1()">
+            +1
+          </button>
+          <button id="home-two" class="hvr-push" onclick="homeAdd2()">
+            +2
+          </button>
+          <button id="home-three" class="hvr-push" onclick="homeAdd3()">
+            +3
+          </button>
         </div>
+        <p id="leadingTeam"></p>
       </div>
       <div>
-        <h3>GUEST</h3>
+        <h3>Second Team</h3>
         <div class="score-card">
-          <p class="guest-points">0</p>
+          <p id="guest-points">0</p>
         </div>
         <div class="plus-point">
-          <button id="guest-one" class="hvr-push">+1</button>
-          <button id="guest-two" class="hvr-push">+2</button>
-          <button id="guest-three" class="hvr-push">+3</button>
+          <button id="guest-one" class="hvr-push" onclick="guestAdd1()">
+            +1
+          </button>
+          <button id="guest-two" class="hvr-push" onclick="guestAdd2()">
+            +2
+          </button>
+          <button id="guest-three" class="hvr-push" onclick="guestAdd3()">
+            +3
+          </button>
+        </div>
+        <div class="controls">
+          <button id="new-game" class="hvr-push" onclick="newGame()">
+            New Game
+          </button>
         </div>
       </div>
     </div>
